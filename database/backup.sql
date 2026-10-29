@@ -1,0 +1,2 @@
+-- SQLite Backup Stub File
+-- Generated on: 2026-06-16

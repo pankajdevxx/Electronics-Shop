@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile | Mani Electronices</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body style="padding: 40px; background: var(--bg-secondary);">
+    <div style="background: var(--bg-primary); padding: 32px; border-radius: 8px; max-width: 600px; margin: auto;">
+        <h2>Your Profile</h2>
+        <p>Username: {{ request.user.username }}</p>
+        <p>Email: {{ request.user.email }}</p>
+        <p>Rewards Points: {{ request.user.profile.rewards_points }}</p>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" style="background: var(--accent-color); color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer;">Save Profile</button>
+        </form>
+        <br>
+        <a href="{% url 'home' %}" style="color: var(--accent-color);">Back to Store</a>
+    </div>
+</body>
+</html>

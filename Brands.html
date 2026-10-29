@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Explore top electronic brands on Mani Electronices - Shop premium electronic products, smart home automation, custom DIY kits, and audio gear.">
+  <title>Brands | Mani Electronics</title>
+  <link rel="icon" type="image/png" href="All_Image/black%20logo.png">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=2.3">
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container nav-container">
+      <!-- Logo -->
+      <a href="index.html" class="logo" id="logoLink">
+        <img src="All_Image/white logo.png" alt="Mani Electronics" class="logo-img">
+      </a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="Brands.html" class="nav-item active">Brands</a></li>
+        <li><a href="index.html" class="nav-item">Shop</a></li>
+        <li><a href="#" class="nav-item">Blog</a></li>
+      </ul>
+
+      <!-- Navigation Action Icons -->
+      <div class="nav-actions">
+        <!-- Search toggle (visible on desktop/tablet) -->
+        <button class="nav-btn" id="searchToggleBtn" title="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+
+
+        <!--Wishlist icon button-->
+        <button class="nav-btn" id="wishlistToggleBtn" title="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="wishlist-count" id="globalWishlistCount">0</span>
+        </button>
+
+        <!-- Shopping Cart Icon -->
+        <button class="nav-btn" id="cartToggleBtn" title="Cart">
+          <i class="fa-solid fa-shopping-cart"></i>
+          <span class="cart-count" id="globalCartCount">0</span>
+        </button>
+
+        <!-- User profile mock avatar -->
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop"
+          alt="User Profile" class="profile-avatar" id="profileBtn" title="Profile">
+
+        <!-- Mobile hamburger menu toggle -->
+        <button class="nav-btn mobile-toggle" id="mobileMenuToggle" title="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Header Search Overlay -->
+    <div class="search-drawer-overlay" id="searchDrawerOverlay">
+      <div class="header-search-bar" id="headerSearchBar">
+        <div class="header-search-wrapper">
+          <i class="fa-solid fa-magnifying-glass header-search-icon"></i>
+          <input type="text" placeholder="Search premium electronics in real-time..." class="header-search-input"
+            id="headerSearchInput">
+          <button class="header-search-close" id="headerSearchCloseBtn" title="Close Search">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="height: 240px;">
+    <!-- Sleek electronics workshop image -->
+    <img src="https://i.pinimg.com/736x/02/cb/67/02cb67680923a6423ea2ee55d90b755e.jpg" alt="High-tech Workshop"
+      class="hero-bg">
+    <div class="hero-content">
+      <h1 class="hero-title reveal-on-scroll reveal-down no-delay" style="font-size: 64px;">Brands</h1>
+      <p class="hero-subtitle reveal-on-scroll reveal-up stagger-1">Our curated partners & hardware creators</p>
+    </div>
+  </section>
+
+  <!-- Brands Showcase Grid Section -->
+  <main class="container brands-section">
+    <div class="brands-title-area reveal-on-scroll reveal-up">
+      <p>Discover products from our industry leading hardware and DIY creators</p>
+    </div>
+
+    <div class="brands-grid">     
+
+      <!-- Headsound Card -->
+      <div class="brand-card reveal-on-scroll reveal-up stagger-2" style="--brand-color-1: #8b5cf6; --brand-color-2: #a855f7;">
+        <img class="brand-card-bg-image" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=600&auto=format&fit=crop" alt="Headsound Headphones">
+        <img class="brand-card-hover-logo" src="All_Image/white logo.png" alt="Mani Electronics Globe">
+        <div class="brand-card-header">
+          <h2 class="brand-name">Headsound</h2>
+          <span class="brand-subtitle"><i class="fa-solid fa-music"></i> Studio Audio</span>
+        </div>
+        <div class="brand-card-info-panel">
+          <p class="brand-desc">Pioneers of studio-grade acoustic engineering. Delivering active noise-cancelling wireless audio, plush ergonomic memory foam gear, and clear highs.</p>
+          <div class="brand-card-footer">
+            <div class="brand-card-meta">
+              <div class="brand-meta-avatar">
+                <i class="fa-solid fa-headphones"></i>
+              </div>
+              <div class="brand-meta-text">
+                <span class="brand-meta-products">3 Products</span>
+              </div>
+            </div>
+            <a href="index.html?search=Headsound" class="btn-view-brand">
+              <span>+ Explore More</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bulb Card -->
+      <div class="brand-card reveal-on-scroll reveal-up stagger-3" style="--brand-color-1: #10b981; --brand-color-2: #34d399;">
+        <img class="brand-card-bg-image" src="https://i.pinimg.com/736x/39/21/c7/3921c7d5fadb584bc96e54ba191d6d6c.jpg" alt="Smart Bulb">
+        <img class="brand-card-hover-logo" src="All_Image/white logo.png" alt="Mani Electronics Globe">
+        <div class="brand-card-header">
+          <h2 class="brand-name">Bulb</h2>
+          <span class="brand-subtitle"><i class="fa-solid fa-lightbulb"></i> Smart Bulb</span>
+        </div>
+        <div class="brand-card-info-panel">
+          <p class="brand-desc">Discover high-quality LED bulbs, smart lighting solutions, decorative lights, and energy-efficient illumination products designed for homes, offices, and commercial spaces.</p>
+          <div class="brand-card-footer">
+            <div class="brand-card-meta">
+              <div class="brand-meta-avatar">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <div class="brand-meta-text">
+                <span class="brand-meta-products">1 Products</span>
+              </div>
+            </div>
+            <a href="index.html?search=Bulb" class="btn-view-brand">
+              <span>+ Explore More</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Speakers Bluetooth Card -->
+      <div class="brand-card reveal-on-scroll reveal-up stagger-4" style="--brand-color-1: #00878f; --brand-color-2: #00a4ad;">
+        <img class="brand-card-bg-image" src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?q=80&w=600&auto=format&fit=crop" alt="Bluetooth Speakers">
+        <img class="brand-card-hover-logo" src="All_Image/white logo.png" alt="Mani Electronics Globe">
+        <div class="brand-card-header">
+          <h2 class="brand-name">Speakers Bluetooth</h2>
+          <span class="brand-subtitle"><i class="fa-solid fa-volume-high"></i> Bluetooth Speakers</span>
+        </div>
+        <div class="brand-card-info-panel">
+          <p class="brand-desc">Discover high-quality speakers, portable Bluetooth speakers, and audio accessories designed for music lovers.</p>
+          <div class="brand-card-footer">
+            <div class="brand-card-meta">
+              <div class="brand-meta-avatar">
+                <i class="fa-solid fa-volume-high"></i>
+              </div>
+              <div class="brand-meta-text">
+                <span class="brand-meta-products">1 Product</span>
+              </div>
+            </div>
+            <a href="index.html?search=Speakers" class="btn-view-brand">
+              <span>+ Explore More</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Anchor Card -->
+      <div class="brand-card reveal-on-scroll reveal-up stagger-5" style="--brand-color-1: #0ea5e9; --brand-color-2: #38bdf8;">
+        <img class="brand-card-bg-image" src="https://rukminim1.flixcart.com/image/1536/1536/xif0q/surge-protector/e/a/s/-original-imahkyhcwvmjfmhm.jpeg?q=90" alt="Anchor Surge Protector">
+        <img class="brand-card-hover-logo" src="All_Image/white logo.png" alt="Mani Electronics Globe">
+        <div class="brand-card-header">
+          <h2 class="brand-name">Anchor</h2>
+          <span class="brand-subtitle"><i class="fa-solid fa-bolt-lightning"></i> Surge & Power</span>
+        </div>
+        <div class="brand-card-info-panel">
+          <p class="brand-desc">By Panasonic. Producing robust multi-port extension boards, electrical spikes & surge protection systems built with fire-retardant materials.</p>
+          <div class="brand-card-footer">
+            <div class="brand-card-meta">
+              <div class="brand-meta-avatar">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <div class="brand-meta-text">
+                <span class="brand-meta-products">1 Product</span>
+              </div>
+            </div>
+            <a href="index.html?search=Anchor" class="btn-view-brand">
+              <span>+ Explore More</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer Links & Info -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- Company column -->
+      <div class="footer-info reveal-on-scroll reveal-up">
+        <a href="index.html" class="logo">Mani Electronices<span class="logo-dot"></span></a>
+        <p class="footer-desc">Curating & crafting premium high-tech electronic gadgets, microcontrollers, and DIY kits for hardware enthusiasts.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-link" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Links column 1 -->
+      <div class="footer-links-col reveal-on-scroll reveal-up stagger-1">
+        <h4>About</h4>
+        <ul class="footer-links">
+          <li><a href="#">Stories</a></li>
+          <li><a href="Brands.html">Brands</a></li>
+        </ul>
+      </div>
+
+      <!-- Links column 2 -->
+      <div class="footer-links-col reveal-on-scroll reveal-up stagger-2">
+        <h4>Support</h4>
+        <ul class="footer-links">
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Return & Exchange</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Links column 3 (Newsletter replica / branding) -->
+      <div class="footer-links-col reveal-on-scroll reveal-up stagger-3">
+        <h4>Workspace Location</h4>
+        <ul class="footer-links">
+          <li><span style="color: var(--text-muted); font-size: 14px;"><i class="fa-solid fa-map-pin" style="margin-right: 8px;"></i>Electronics Workshop Shop</span></li>
+          <li><span style="color: var(--text-muted); font-size: 14px;"><i class="fa-solid fa-clock" style="margin-right: 8px;"></i>Mon - Fri: 9:00 AM - 6:00 PM</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom copyrights -->
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Mani Electronices. All Rights Reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Warranty Policy</a>
+        <a href="#">Return, Exchanges and Refund Policy</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-in Cart Drawer Overlay -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay">
+    <div class="cart-drawer">
+      <div class="cart-header">
+        <h3>Shopping Cart</h3>
+        <button class="btn-close-cart" id="closeCartBtn" title="Close Cart">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <!-- Cart item listing container -->
+      <div class="cart-items-list" id="cartItemsList">
+        <!-- Renders programmatically -->
+      </div>
+      <!-- Footer summaries & checkout button -->
+      <div class="cart-footer">
+        <div class="cart-summary-row">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">₹0.00</span>
+        </div>
+        <div class="cart-summary-row">
+          <span>Shipping</span>
+          <span style="color: #10b981; font-weight: 600;">FREE</span>
+        </div>
+        <div class="cart-summary-row total">
+          <span>Total</span>
+          <span id="cartTotal">₹0.00</span>
+        </div>
+        <button class="btn-checkout" id="checkoutBtn">
+          Checkout <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide-in Wishlist Drawer Overlay -->
+  <div class="wishlist-drawer-overlay" id="wishlistDrawerOverlay">
+    <div class="wishlist-drawer">
+      <div class="cart-header">
+        <h3>My Wishlist</h3>
+        <button class="btn-close-cart" id="closeWishlistBtn" title="Close Wishlist">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <!-- Wishlist item listing container -->
+      <div class="cart-items-list" id="wishlistItemsList">
+        <!-- Renders programmatically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Auth Modal Overlay (Sign In / Sign Up) -->
+  <div class="modal-overlay" id="authModal">
+    <div class="auth-modal-content">
+      <button class="btn-close-modal" id="closeAuthModalBtn" title="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Left side banner -->
+      <div class="auth-left-banner">
+        <div class="auth-banner-glow-bars">
+          <div class="glow-bar glow-1"></div>
+          <div class="glow-bar glow-2"></div>
+          <div class="glow-bar glow-3"></div>
+          <div class="glow-bar glow-4"></div>
+          <div class="glow-bar glow-5"></div>
+        </div>
+        <div class="auth-banner-content">
+          <h2>Simplify The Process.<br>Supercharge The Results.</h2>
+          <p>Focus On The Big Picture While We Automate The Daily Details.</p>
+        </div>
+      </div>
+
+      <!-- Right side forms (sliding container) -->
+      <div class="auth-right-container">
+        <div class="auth-slider" id="authSlider">
+
+          <!-- SIGN IN FORM -->
+          <div class="auth-form-side" id="signInSide">
+            <div class="auth-header-logo">
+              <div class="auth-logo-icon">
+                <div class="logo-circle-outer"></div>
+                <div class="logo-circle-inner"></div>
+              </div>
+              <span class="auth-logo-text">Mani Electronices</span>
+            </div>
+
+            <h3 class="auth-title">Log in to your account</h3>
+            <p class="auth-subtitle">Welcome back! Fill in your details to get you back in.</p>
+
+            <form class="auth-form" id="signInForm">
+              <div class="form-group">
+                <label for="signInEmail">Email</label>
+                <input type="email" id="signInEmail" placeholder="Heymaxwell@gmail.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="signInPassword">Password</label>
+                <input type="password" id="signInPassword" placeholder="••••••••" required>
+              </div>
+
+              <div class="form-options">
+                <label class="remember-me">
+                  <input type="checkbox" id="signInRemember">
+                  <span>Remember Me</span>
+                </label>
+                <a href="#" class="forgot-pass-link" id="forgotPasswordBtn">Forget Password</a>
+              </div>
+
+              <button type="submit" class="btn-auth-submit">
+                <span>Log In</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+
+              <div class="auth-separator">
+                <span>Or continue with</span>
+              </div>
+
+              <div class="social-login-group">
+                <button type="button" class="btn-social-login" id="googleLoginBtn">
+                  <img src="https://img.icons8.com/color/18/000000/google-logo.png" class="social-logo" alt="Google">
+                  <span>Sign In With Google</span>
+                </button>
+                <button type="button" class="btn-social-login" id="appleLoginBtn">
+                  <i class="fa-brands fa-apple social-icon"></i>
+                  <span>Sign In With Apple</span>
+                </button>
+              </div>
+
+              <p class="auth-toggle-footer">
+                Don't have an account? <span class="toggle-link" id="toSignUpLink">Create One</span>
+              </p>
+            </form>
+          </div>
+
+          <!-- SIGN UP FORM -->
+          <div class="auth-form-side" id="signUpSide">
+            <div class="auth-header-logo">
+              <div class="auth-logo-icon">
+                <div class="logo-circle-outer"></div>
+                <div class="logo-circle-inner"></div>
+              </div>
+              <span class="auth-logo-text">Mani Electronices</span>
+            </div>
+
+            <h3 class="auth-title">Create your account</h3>
+            <p class="auth-subtitle">Join us today! Enter your details to get started.</p>
+
+            <form class="auth-form" id="signUpForm">
+              <div class="form-group">
+                <label for="signUpName">Full Name</label>
+                <input type="text" id="signUpName" placeholder="Maxwell Ryan" required>
+              </div>
+
+              <div class="form-group">
+                <label for="signUpEmail">Email</label>
+                <input type="email" id="signUpEmail" placeholder="Heymaxwell@gmail.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="signUpPassword">Password</label>
+                <input type="password" id="signUpPassword" placeholder="••••••••" required>
+              </div>
+
+              <div class="form-options">
+                <label class="remember-me">
+                  <input type="checkbox" id="signUpTerms" required>
+                  <span>I agree to the Terms & Conditions</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn-auth-submit">
+                <span>Sign Up</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+
+              <div class="auth-separator">
+                <span>Or continue with</span>
+              </div>
+
+              <div class="social-login-group">
+                <button type="button" class="btn-social-login" id="googleRegisterBtn">
+                  <img src="https://img.icons8.com/color/18/000000/google-logo.png" class="social-logo" alt="Google">
+                  <span>Sign Up With Google</span>
+                </button>
+                <button type="button" class="btn-social-login" id="appleRegisterBtn">
+                  <i class="fa-brands fa-apple social-icon"></i>
+                  <span>Sign Up With Apple</span>
+                </button>
+              </div>
+
+              <p class="auth-toggle-footer">
+                Already have an account? <span class="toggle-link" id="toSignInLink">Log In</span>
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Registration Success Modal -->
+  <div class="modal-overlay" id="regSuccessModal">
+    <div class="reg-success-content">
+      <button class="btn-close-modal" id="closeRegSuccessBtn" title="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="reg-success-icon-wrapper">
+        <div class="reg-success-icon">
+          <svg class="checkmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+            <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+            <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+          </svg>
+        </div>
+      </div>
+      <h3 class="reg-success-title">Registration Successful!</h3>
+      <p class="reg-success-description">
+        Your account has been created successfully. You are now part of Mani Electronics! Please log in to explore our premium components, smart home automation, and custom DIY kits.
+      </p>
+      <button class="btn-reg-success-action" id="regSuccessActionBtn">
+        <span>Proceed to Login</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Slide-in Mobile Navigation Menu -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div class="mobile-menu-drawer">
+      <div class="mobile-menu-header">
+        <a href="index.html" class="logo">
+          <img src="All_Image/white logo.png" alt="Mani Electronics" class="logo-img">
+        </a>
+        <button class="btn-close-menu" id="closeMobileMenuBtn" title="Close Menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="Brands.html" class="mobile-nav-item active"><i class="fa-solid fa-tags"></i> Brands</a></li>
+        <li><a href="index.html" class="mobile-nav-item"><i class="fa-solid fa-store"></i> Shop</a></li>
+        <li><a href="#" class="mobile-nav-item"><i class="fa-solid fa-blog"></i> Blog</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Application Logic JavaScript -->
+  <script src="app.js"></script>
+</body>
+
+</html>

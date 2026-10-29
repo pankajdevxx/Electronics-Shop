@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mani Electronices - Shop premium electronic products, smart home automation, custom DIY kits, and audio gear. Clean, accessible, modern tech shopping experience.">
+  <title>Mani Electronics | Premium Electronics Store</title>
+  <link rel="icon" type="image/png" href="All_Image/black%20logo.png">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=2.3">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container nav-container">
+      <!-- Logo -->
+      <a href="index.html" class="logo" id="logoLink">
+        <img src="All_Image/white logo.png" alt="Mani Electronics" class="logo-img">
+      </a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="Brands.html" class="nav-item">Brands</a></li>
+        <li><a href="index.html" class="nav-item active">Shop</a></li>
+        <li><a href="#" class="nav-item">Blog</a></li>
+      </ul>
+
+      <!-- Navigation Action Icons -->
+      <div class="nav-actions">
+        <!-- Search toggle (visible on desktop/tablet) -->
+        <button class="nav-btn" id="searchToggleBtn" title="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+
+
+        <!--Wishlist icon button-->
+        <button class="nav-btn" id="wishlistToggleBtn" title="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="wishlist-count" id="globalWishlistCount">0</span>
+        </button>
+        
+        <!-- Shopping Cart Icon -->
+        <button class="nav-btn" id="cartToggleBtn" title="Cart">
+          <i class="fa-solid fa-shopping-cart"></i>
+          <span class="cart-count" id="globalCartCount">0</span>
+        </button>
+
+        <!-- User profile mock avatar -->
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop" alt="User Profile" class="profile-avatar" id="profileBtn" title="Profile">
+        
+        <!-- Mobile hamburger menu toggle -->
+        <button class="nav-btn mobile-toggle" id="mobileMenuToggle" title="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Header Search Overlay -->
+    <div class="search-drawer-overlay" id="searchDrawerOverlay">
+      <div class="header-search-bar" id="headerSearchBar">
+        <div class="header-search-wrapper">
+          <i class="fa-solid fa-magnifying-glass header-search-icon"></i>
+          <input type="text" placeholder="Search premium electronics in real-time..." class="header-search-input" id="headerSearchInput">
+          <button class="header-search-close" id="headerSearchCloseBtn" title="Close Search">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Sleek electronics workshop image -->
+    <img src="https://i.pinimg.com/736x/02/cb/67/02cb67680923a6423ea2ee55d90b755e.jpg" alt="High-tech Workshop" class="hero-bg">
+    <div class="hero-content">
+      <h1 class="hero-title reveal-on-scroll reveal-down no-delay">Shop</h1>
+      <p class="hero-subtitle reveal-on-scroll reveal-up stagger-1">Innovative Electronics & Custom DIY Kits</p>
+    </div>
+  </section>
+
+  <!-- Main Content Layout (Sidebar & Shop Grid) -->
+  <section class="container shop-section">
+    <div class="shop-layout">
+      <!-- Left Sidebar Navigation -->
+      <aside class="sidebar reveal-on-scroll reveal-left">
+        <h3 class="sidebar-title">Category</h3>
+        <div class="category-tree-container">
+          <!-- Main Category Header (All Products) -->
+          <div class="category-main-header active" data-category="all" id="categoryMainHeader">
+            <div class="category-main-title">
+              <i class="fa-solid fa-briefcase main-icon"></i>
+              <span>All Products</span>
+            </div>
+            <div class="category-main-right">
+              <span class="category-main-count" id="count-all">0</span>
+              <i class="fa-solid fa-chevron-down chevron-icon"></i>
+            </div>
+          </div>
+          
+          <!-- Subcategory List (Tree) -->
+          <ul class="category-sub-list" id="categorySubList">
+            <li class="category-sub-item" data-category="home">
+              <a href="#" class="category-sub-link">
+                <i class="fa-solid fa-store sub-icon"></i>
+                <span>Electronics Hub</span>
+              </a>
+            </li>
+            <li class="category-sub-item" data-category="music">
+              <a href="#" class="category-sub-link">
+                <i class="fa-solid fa-music sub-icon"></i>
+                <span>For Music</span>
+              </a>
+            </li>
+            <li class="category-sub-item" data-category="diy">
+              <a href="#" class="category-sub-link">
+                <i class="fa-solid fa-microchip sub-icon"></i>
+                <span>DIY Kits & Components</span>
+              </a>
+            </li>
+            <li class="category-sub-item" data-category="custom">
+              <a href="#" class="category-sub-link">
+                <i class="fa-solid fa-screwdriver-wrench sub-icon"></i>
+                <span>Custom Builds</span>
+              </a>
+            </li>
+            <li class="category-sub-item" data-category="services">
+              <a href="#" class="category-sub-link">
+                <i class="fa-solid fa-gears sub-icon"></i>
+                <span>Repair & Services</span>
+                <span class="category-main-count" id="count-services" style="margin-left: 8px; font-size: 10px; background-color: var(--accent-color); padding: 1px 5px; border-radius: 4px; color: #fff;">0</span>
+              </a>
+            </li>
+          </ul>
+          <!-- Clear Filters Button -->
+          <button class="btn-clear-filters" id="btnClearFilters" title="Clear All Filters">
+            <i class="fa-solid fa-filter-circle-xmark"></i>
+            <span>All Clear</span>
+          </button>
+        </div>
+
+
+        <!-- Product & Service Filters -->
+        <div class="sidebar-divider"></div>
+        <h4 class="filter-section-title">Product & Service Filters</h4>
+        
+        <!-- Price Range Filter -->
+        <div class="dropdown-section">
+          <div class="dropdown-header" id="priceFilterHeader">
+            <span>Price Range (Keemat)</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="dropdown-content">
+            <div class="price-range-inputs">
+              <div class="price-input-row">
+                <input type="number" id="priceMin" placeholder="Min" min="0" class="filter-price-num">
+                <span>to</span>
+                <input type="number" id="priceMax" placeholder="Max" min="0" class="filter-price-num">
+              </div>
+              <button class="btn-apply-price" id="btnApplyPrice">Apply</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brand Filter -->
+        <div class="dropdown-section">
+          <div class="dropdown-header" id="brandFilterHeader">
+            <span>Brand (Company)</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="dropdown-content checkbox-list scrollable-list" id="sidebarBrandList">
+            <label class="filter-checkbox"><input type="checkbox" name="brand" value="AMLER"> <span>AMLER</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="brand" value="Sony"> <span>Sony</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="brand" value="ILIFE"> <span>ILIFE</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="brand" value="FITRIC"> <span>FITRIC</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="brand" value="OnePlus"> <span>OnePlus</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="brand" value="JBL"> <span>JBL</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="brand" value="Philips"> <span>Philips</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="brand" value="Mani Electronics"> <span>Mani Electronics</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="brand" value="Cyberpunk"> <span>Cyberpunk</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="brand" value="Anchor"> <span>Anchor</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="brand" value="Boat"> <span>Boat</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="brand" value="Noise"> <span>Noise</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="brand" value="LG"> <span>LG</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="brand" value="Samsung"> <span>Samsung</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="brand" value="Apple"> <span>Apple</span></label>
+          </div>
+        </div>
+
+        <!-- Customer Rating Filter -->
+        <div class="dropdown-section">
+          <div class="dropdown-header" id="ratingFilterHeader">
+            <span>Customer Rating (Rating)</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="dropdown-content checkbox-list">
+            <label class="filter-radio"><input type="radio" name="rating" value="all" checked> <span>All Ratings</span></label>
+            <label class="filter-radio"><input type="radio" name="rating" value="4.5"> <span>4.5 ★ & above</span></label>
+            <label class="filter-radio"><input type="radio" name="rating" value="4.0"> <span>4.0 ★ & above</span></label>
+            <label class="filter-radio"><input type="radio" name="rating" value="3.5"> <span>3.5 ★ & above</span></label>
+          </div>
+        </div>
+
+        <!-- Availability Filter -->
+        <div class="dropdown-section">
+          <div class="dropdown-header" id="availabilityFilterHeader">
+            <span>Availability</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="dropdown-content checkbox-list">
+            <label class="filter-checkbox"><input type="checkbox" name="availability" value="in-stock"> <span>In Stock</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="availability" value="out-of-stock"> <span>Out of Stock</span></label>
+          </div>
+        </div>
+
+        <!-- Warranty Status Filter -->
+        <div class="dropdown-section">
+          <div class="dropdown-header" id="warrantyFilterHeader">
+            <span>Warranty Status</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="dropdown-content checkbox-list">
+            <label class="filter-checkbox"><input type="checkbox" name="warranty" value="1 Year"> <span>1 Year Warranty</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="warranty" value="2 Years"> <span>2 Years Warranty</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="warranty" value="No Warranty"> <span>No Warranty</span></label>
+          </div>
+        </div>
+
+        <!-- Features Filter -->
+        <div class="sidebar-divider"></div>
+        <h4 class="filter-section-title">Features</h4>
+        <div class="dropdown-section">
+          <div class="dropdown-header" id="featuresFilterHeader">
+            <span>Product Features</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="dropdown-content checkbox-list" id="sidebarFeaturesList">
+            <label class="filter-checkbox"><input type="checkbox" name="features" value="Deep Bass"> <span>Deep Bass</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="features" value="Fast Charging"> <span>Fast Charging</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="features" value="Flatwire"> <span>Flatwire</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="features" value="Foldable/Collapsible"> <span>Foldable/Collapsible</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="features" value="Noise Cancellation"> <span>Noise Cancellation</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="features" value="Sweat Proof"> <span>Sweat Proof</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="features" value="True Wireless"> <span>True Wireless</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="features" value="Water Resistant"> <span>Water Resistant</span></label>
+          </div>
+        </div>
+
+        <!-- Discount Filter -->
+        <div class="sidebar-divider"></div>
+        <h4 class="filter-section-title">Discount</h4>
+        <div class="dropdown-section">
+          <div class="dropdown-header" id="discountFilterHeader">
+            <span>Special Offers</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="dropdown-content checkbox-list">
+            <label class="filter-radio"><input type="radio" name="discount" value="50"> <span>50% or more</span></label>
+            <label class="filter-radio"><input type="radio" name="discount" value="40"> <span>40% or more</span></label>
+            <label class="filter-radio"><input type="radio" name="discount" value="30"> <span>30% or more</span></label>
+            <label class="filter-radio"><input type="radio" name="discount" value="20"> <span>20% or more</span></label>
+            <label class="filter-radio"><input type="radio" name="discount" value="10"> <span>10% or more</span></label>
+            <label class="filter-radio"><input type="radio" name="discount" value="0" checked> <span>No Minimum</span></label>
+          </div>
+        </div>
+
+        <!-- Color Filter -->
+        <div class="sidebar-divider"></div>
+        <h4 class="filter-section-title">Color</h4>
+        <div class="color-picker-grid" id="sidebarColorList">
+          <button class="color-btn" style="background-color: #f5f5dc;" data-color="Beige" title="Beige"></button>
+          <button class="color-btn" style="background-color: #000000; border: 1px solid #555;" data-color="Black" title="Black"></button>
+          <button class="color-btn" style="background-color: #2563eb;" data-color="Blue" title="Blue"></button>
+          <button class="color-btn" style="background-color: #964b00;" data-color="Brown" title="Brown"></button>
+          <button class="color-btn" style="background-color: #ffd700;" data-color="Gold" title="Gold"></button>
+          <button class="color-btn" style="background-color: #10b981;" data-color="Green" title="Green"></button>
+          <button class="color-btn" style="background-color: #6b7280;" data-color="Grey" title="Grey"></button>
+          <button class="color-btn multicolor" data-color="Multicolor" title="Multicolor"></button>
+          <button class="color-btn" style="background-color: #f97316;" data-color="Orange" title="Orange"></button>
+          <button class="color-btn" style="background-color: #ec4899;" data-color="Pink" title="Pink"></button>
+          <button class="color-btn" style="background-color: #a855f7;" data-color="Purple" title="Purple"></button>
+          <button class="color-btn" style="background-color: #ef4444;" data-color="Red" title="Red"></button>
+          <button class="color-btn" style="background-color: #c0c0c0;" data-color="Silver" title="Silver"></button>
+          <button class="color-btn" style="background-color: #ffffff; border: 1px solid #ddd;" data-color="White" title="White"></button>
+          <button class="color-btn" style="background-color: #eab308;" data-color="Yellow" title="Yellow"></button>
+        </div>
+
+        <!-- Repair & Service Filters -->
+        <div class="sidebar-divider"></div>
+        <h4 class="filter-section-title">Repair & Service Filters</h4>
+        
+        <!-- Service Type Filter -->
+        <div class="dropdown-section">
+          <div class="dropdown-header" id="serviceTypeHeader">
+            <span>Service Type</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="dropdown-content checkbox-list" id="sidebarServiceTypeList">
+            <label class="filter-checkbox"><input type="checkbox" name="serviceType" value="repair"> <span>Repair</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="serviceType" value="installation"> <span>Installation</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="serviceType" value="maintenance"> <span>Maintenance</span></label>
+          </div>
+        </div>
+
+        <!-- Device Category Filter -->
+        <div class="dropdown-section">
+          <div class="dropdown-header" id="deviceCategoryHeader">
+            <span>Device Category</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="dropdown-content checkbox-list" id="sidebarDeviceCategoryList">
+            <label class="filter-checkbox"><input type="checkbox" name="deviceCategory" value="fridge"> <span>Fridge</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="deviceCategory" value="cooler"> <span>Cooler</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="deviceCategory" value="tv"> <span>TV</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="deviceCategory" value="watch"> <span>Watch</span></label>
+          </div>
+        </div>
+
+        <!-- Service Mode Filter -->
+        <div class="dropdown-section">
+          <div class="dropdown-header" id="serviceModeHeader">
+            <span>Service Mode</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="dropdown-content checkbox-list" id="sidebarServiceModeList">
+            <label class="filter-checkbox"><input type="checkbox" name="serviceMode" value="home-visit"> <span>Home Visit</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="serviceMode" value="store-walk-in"> <span>Store Walk-in</span></label>
+          </div>
+        </div>
+
+        <!-- Repair Urgency Filter -->
+        <div class="dropdown-section">
+          <div class="dropdown-header" id="repairUrgencyHeader">
+            <span>Repair Urgency</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="dropdown-content checkbox-list" id="sidebarRepairUrgencyList">
+            <label class="filter-checkbox"><input type="checkbox" name="repairUrgency" value="normal"> <span>Normal</span></label>
+            <label class="filter-checkbox"><input type="checkbox" name="repairUrgency" value="express"> <span>Express</span></label>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Shop Content Grid Area -->
+      <main class="shop-content">
+        <!-- Content Header Area with Search bar -->
+        <div class="content-header">
+          <div class="content-title-area reveal-on-scroll reveal-down">
+            <h2 id="currentCategoryTitle">Give All You Need</h2>
+            <p id="currentCategorySub">Showing premium handpicked electronics</p>
+          </div>
+          <div class="search-filter-bar reveal-on-scroll reveal-up stagger-1">
+            <div class="search-wrapper">
+              <i class="fa-solid fa-magnifying-glass search-icon"></i>
+              <input type="text" placeholder="Search on Mani Electronices..." class="search-input" id="searchInput">
+            </div>
+            <button class="search-btn" id="searchBtn">Search</button>
+            <button class="filter-popup-trigger-btn" id="filterPopupTriggerBtn" title="Advanced Filters">
+              <i class="fa-solid fa-sliders"></i>
+              <span>Filters</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Product Grid -->
+        <div class="product-grid" id="productGrid">
+          <!-- Populated programmatically by app.js -->
+        </div>
+
+        <!-- Product Grid Pagination -->
+        <div class="pagination">
+          <button class="pagination-btn disabled" id="prevPageBtn" title="Previous Page">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button class="pagination-btn active">1</button>
+          <button class="pagination-btn">2</button>
+          <button class="pagination-btn">3</button>
+          <span class="pagination-ellipsis">...</span>
+          <button class="pagination-btn">8</button>
+          <button class="pagination-btn">9</button>
+          <button class="pagination-btn">10</button>
+          <button class="pagination-btn" id="nextPageBtn" title="Next Page">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <!-- Explore recommendations Horizontal Carousel Section -->
+  <section class="recommendations-section">
+    <div class="container">
+      <div class="section-header reveal-on-scroll reveal-up">
+        <h2>Explore our recommendations</h2>
+        <div class="carousel-nav">
+          <button class="carousel-btn" id="carouselPrevBtn" title="Scroll Left">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button class="carousel-btn" id="carouselNextBtn" title="Scroll Right">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="carousel-container reveal-on-scroll reveal-up stagger-1" id="recommendationsCarousel">
+        <!-- Populated programmatically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Dark charcoal call-to-action newsletter banner -->
+  <section class="container" style="padding: 32px 0;">
+    <div class="footer-banner reveal-on-scroll reveal-scale">
+      <div class="banner-left">
+        <h3>Ready to Get Our New Stuff?</h3>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Your Email" class="newsletter-input" id="newsletterEmail" required>
+          <button type="submit" class="newsletter-btn">Send</button>
+        </form>
+      </div>
+      <div class="banner-right">
+        <strong>Mani Electronices for Homes and Needs</strong>
+        <p>We'll listen to your needs, identify the best approach, and then create a bespoke smart electronics charging and utility solution that's right for you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer Links & Info -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- Company column -->
+      <div class="footer-info reveal-on-scroll reveal-up">
+        <a href="index.html" class="logo">Mani Electronices<span class="logo-dot"></span></a>
+        <p class="footer-desc">Curating & crafting premium high-tech electronic gadgets, microcontrollers, and DIY kits for hardware enthusiasts.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-link" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Links column 1 -->
+      <div class="footer-links-col reveal-on-scroll reveal-up stagger-1">
+        <h4>About</h4>
+        <ul class="footer-links">
+          <li><a href="#">Stories</a></li>
+          <li><a href="Brands.html">Brands</a></li>
+        </ul>
+      </div>
+
+      <!-- Links column 2 -->
+      <div class="footer-links-col reveal-on-scroll reveal-up stagger-2">
+        <h4>Support</h4>
+        <ul class="footer-links">
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Return & Exchange</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Links column 3 (Newsletter replica / branding) -->
+      <div class="footer-links-col reveal-on-scroll reveal-up stagger-3">
+        <h4>Workspace Location</h4>
+        <ul class="footer-links">
+          <li><span style="color: var(--text-muted); font-size: 14px;"><i class="fa-solid fa-map-pin" style="margin-right: 8px;"></i>Electronics Workshop Shop</span></li>
+          <li><span style="color: var(--text-muted); font-size: 14px;"><i class="fa-solid fa-clock" style="margin-right: 8px;"></i>Mon - Fri: 9:00 AM - 6:00 PM</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom copyrights -->
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Mani Electronices. All Rights Reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Warranty Policy</a>
+        <a href="#">Return, Exchanges and Refund Policy</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-in Cart Drawer Overlay -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay">
+    <div class="cart-drawer">
+      <div class="cart-header">
+        <h3>Shopping Cart</h3>
+        <button class="btn-close-cart" id="closeCartBtn" title="Close Cart">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <!-- Cart item listing container -->
+      <div class="cart-items-list" id="cartItemsList">
+        <!-- Renders programmatically -->
+      </div>
+      <!-- Footer summaries & checkout button -->
+      <div class="cart-footer">
+        <div class="cart-summary-row">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">₹0.00</span>
+        </div>
+        <div class="cart-summary-row">
+          <span>Shipping</span>
+          <span style="color: #10b981; font-weight: 600;">FREE</span>
+        </div>
+        <div class="cart-summary-row total">
+          <span>Total</span>
+          <span id="cartTotal">₹0.00</span>
+        </div>
+        <button class="btn-checkout" id="checkoutBtn">
+          Checkout <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide-in Wishlist Drawer Overlay -->
+  <div class="wishlist-drawer-overlay" id="wishlistDrawerOverlay">
+    <div class="wishlist-drawer">
+      <div class="cart-header">
+        <h3>My Wishlist</h3>
+        <button class="btn-close-cart" id="closeWishlistBtn" title="Close Wishlist">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <!-- Wishlist item listing container -->
+      <div class="cart-items-list" id="wishlistItemsList">
+        <!-- Renders programmatically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Detail Modal Overlay -->
+  <div class="modal-overlay" id="productDetailModal">
+    <div class="modal-content">
+      <button class="btn-close-modal" id="closeModalBtn" title="Close Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div class="modal-left">
+        <!-- Render product big image -->
+        <span class="product-tag" id="modalProductTag">Tag</span>
+        <div class="modal-carousel-container">
+          <button class="modal-carousel-arrow arrow-left" id="modalPrevImgBtn" title="Previous Image">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <img src="assets/phone_holder.png" alt="Product Name" class="modal-main-img" id="modalProductImg">
+          <button class="modal-carousel-arrow arrow-right" id="modalNextImgBtn" title="Next Image">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="modal-carousel-dots" id="modalCarouselDots">
+          <!-- Dots will be populated programmatically -->
+        </div>
+      </div>
+      
+      <div class="modal-right">
+        <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 8px; flex-wrap: wrap;">
+          <span class="modal-tag" id="modalProductCategory">Category</span>
+          <span class="modal-tag" id="modalProductBrand" style="background: var(--bg-secondary); color: var(--text-muted); border: 1px solid var(--border-color); text-transform: uppercase; font-size: 11px; font-weight: 700; padding: 4px 8px; border-radius: 4px;">Brand</span>
+        </div>
+        <h2 class="modal-title" id="modalProductTitle">Product Title</h2>
+        <div class="modal-rating">
+          <span class="rating-stars" id="modalProductStars">
+            <!-- Renders stars -->
+          </span>
+          <span class="rating-text" id="modalProductReviews">5.0 (120 Reviews)</span>
+        </div>
+        <div class="modal-price" id="modalProductPrice">₹0.00</div>
+        
+        <div class="modal-actions">
+          <button class="modal-btn-add" id="modalAddToCartBtn">Add to Cart</button>
+          <button class="modal-btn-buy" id="modalBuyNowBtn">Buy Now</button>
+          <button class="modal-btn-wishlist" id="modalWishlistBtn" title="Add to Wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+
+        <p class="modal-desc" id="modalProductDesc">
+          Full detailed description of the premium electronics gear. Built with advanced materials and optimized for longevity and convenience.
+        </p>
+
+        <div class="modal-features-section">
+          <h4 class="modal-features-title">Key Features</h4>
+          <ul class="modal-features-list" id="modalProductFeatures">
+            <!-- Renders programmatically -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Auth Modal Overlay (Sign In / Sign Up) -->
+  <div class="modal-overlay" id="authModal">
+    <div class="auth-modal-content">
+      <button class="btn-close-modal" id="closeAuthModalBtn" title="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <!-- Left side banner -->
+      <div class="auth-left-banner">
+        <div class="auth-banner-glow-bars">
+          <div class="glow-bar glow-1"></div>
+          <div class="glow-bar glow-2"></div>
+          <div class="glow-bar glow-3"></div>
+          <div class="glow-bar glow-4"></div>
+          <div class="glow-bar glow-5"></div>
+        </div>
+        <div class="auth-banner-content">
+          <h2>Simplify The Process.<br>Supercharge The Results.</h2>
+          <p>Focus On The Big Picture While We Automate The Daily Details.</p>
+        </div>
+      </div>
+      
+      <!-- Right side forms (sliding container) -->
+      <div class="auth-right-container">
+        <div class="auth-slider" id="authSlider">
+          
+          <!-- SIGN IN FORM -->
+          <div class="auth-form-side" id="signInSide">
+            <div class="auth-header-logo">
+              <div class="auth-logo-icon">
+                <div class="logo-circle-outer"></div>
+                <div class="logo-circle-inner"></div>
+              </div>
+              <span class="auth-logo-text">Mani Electronices</span>
+            </div>
+            
+            <h3 class="auth-title">Log in to your account</h3>
+            <p class="auth-subtitle">Welcome back! Fill in your details to get you back in.</p>
+            
+            <form class="auth-form" id="signInForm">
+              <div class="form-group">
+                <label for="signInEmail">Email</label>
+                <input type="email" id="signInEmail" placeholder="Heymaxwell@gmail.com" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="signInPassword">Password</label>
+                <input type="password" id="signInPassword" placeholder="••••••••" required>
+              </div>
+              
+              <div class="form-options">
+                <label class="remember-me">
+                  <input type="checkbox" id="signInRemember">
+                  <span>Remember Me</span>
+                </label>
+                <a href="#" class="forgot-pass-link" id="forgotPasswordBtn">Forget Password</a>
+              </div>
+              
+              <button type="submit" class="btn-auth-submit">
+                <span>Log In</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              
+              <div class="auth-separator">
+                <span>Or continue with</span>
+              </div>
+              
+              <div class="social-login-group">
+                <button type="button" class="btn-social-login" id="googleLoginBtn">
+                  <img src="https://img.icons8.com/color/18/000000/google-logo.png" class="social-logo" alt="Google">
+                  <span>Sign In With Google</span>
+                </button>
+                <button type="button" class="btn-social-login" id="appleLoginBtn">
+                  <i class="fa-brands fa-apple social-icon"></i>
+                  <span>Sign In With Apple</span>
+                </button>
+              </div>
+              
+              <p class="auth-toggle-footer">
+                Don't have an account? <span class="toggle-link" id="toSignUpLink">Create One</span>
+              </p>
+            </form>
+          </div>
+          
+          <!-- SIGN UP FORM -->
+          <div class="auth-form-side" id="signUpSide">
+            <div class="auth-header-logo">
+              <div class="auth-logo-icon">
+                <div class="logo-circle-outer"></div>
+                <div class="logo-circle-inner"></div>
+              </div>
+              <span class="auth-logo-text">Mani Electronices</span>
+            </div>
+            
+            <h3 class="auth-title">Create your account</h3>
+            <p class="auth-subtitle">Join us today! Enter your details to get started.</p>
+            
+            <form class="auth-form" id="signUpForm">
+              <div class="form-group">
+                <label for="signUpName">Full Name</label>
+                <input type="text" id="signUpName" placeholder="Maxwell Ryan" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="signUpEmail">Email</label>
+                <input type="email" id="signUpEmail" placeholder="Heymaxwell@gmail.com" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="signUpPassword">Password</label>
+                <input type="password" id="signUpPassword" placeholder="••••••••" required>
+              </div>
+              
+              <div class="form-options">
+                <label class="remember-me">
+                  <input type="checkbox" id="signUpTerms" required>
+                  <span>I agree to the Terms & Conditions</span>
+                </label>
+              </div>
+              
+              <button type="submit" class="btn-auth-submit">
+                <span>Sign Up</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              
+              <div class="auth-separator">
+                <span>Or continue with</span>
+              </div>
+              
+              <div class="social-login-group">
+                <button type="button" class="btn-social-login" id="googleRegisterBtn">
+                  <img src="https://img.icons8.com/color/18/000000/google-logo.png" class="social-logo" alt="Google">
+                  <span>Sign Up With Google</span>
+                </button>
+                <button type="button" class="btn-social-login" id="appleRegisterBtn">
+                  <i class="fa-brands fa-apple social-icon"></i>
+                  <span>Sign Up With Apple</span>
+                </button>
+              </div>
+              
+              <p class="auth-toggle-footer">
+                Already have an account? <span class="toggle-link" id="toSignInLink">Log In</span>
+              </p>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Registration Success Modal -->
+  <div class="modal-overlay" id="regSuccessModal">
+    <div class="reg-success-content">
+      <button class="btn-close-modal" id="closeRegSuccessBtn" title="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="reg-success-icon-wrapper">
+        <div class="reg-success-icon">
+          <svg class="checkmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+            <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+            <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+          </svg>
+        </div>
+      </div>
+      <h3 class="reg-success-title">Registration Successful!</h3>
+      <p class="reg-success-description">
+        Your account has been created successfully. You are now part of Mani Electronics! Please log in to explore our premium components, smart home automation, and custom DIY kits.
+      </p>
+      <button class="btn-reg-success-action" id="regSuccessActionBtn">
+        <span>Proceed to Login</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Slide-in Mobile Navigation Menu -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div class="mobile-menu-drawer">
+      <div class="mobile-menu-header">
+        <a href="index.html" class="logo">
+          <img src="All_Image/white logo.png" alt="Mani Electronics" class="logo-img">
+        </a>
+        <button class="btn-close-menu" id="closeMobileMenuBtn" title="Close Menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="Brands.html" class="mobile-nav-item"><i class="fa-solid fa-tags"></i> Brands</a></li>
+        <li><a href="index.html" class="mobile-nav-item active"><i class="fa-solid fa-store"></i> Shop</a></li>
+        <li><a href="#" class="mobile-nav-item"><i class="fa-solid fa-blog"></i> Blog</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Floating Mobile Filter Trigger Button -->
+  <button class="mobile-floating-filter-btn" id="mobileFloatingFilterBtn" title="Open Filters">
+    <i class="fa-solid fa-filter"></i>
+  </button>
+
+  <!-- Advanced Filter Popup Modal Overlay -->
+  <div class="modal-overlay filter-modal-overlay" id="filterModal">
+    <div class="filter-modal-content">
+      <div class="filter-modal-header">
+        <h3><i class="fa-solid fa-sliders"></i> Advanced Filters</h3>
+        <button class="btn-close-modal" id="closeFilterModalBtn" title="Close Filters">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      
+      <div class="filter-modal-body">
+        <div class="filter-column">
+          <h4 class="filter-section-title">Product & Service Filters</h4>
+          
+          <!-- Category Filter in Popup -->
+          <div class="dropdown-section">
+            <div class="dropdown-header">
+              <span>Category</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="dropdown-content checkbox-list">
+              <label class="filter-checkbox"><input type="checkbox" name="popup-category" value="home"> <span>Electronics Hub</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-category" value="music"> <span>For Music</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-category" value="diy"> <span>DIY Kits</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-category" value="custom"> <span>Custom Builds</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-category" value="services"> <span>Repair & Services</span></label>
+            </div>
+          </div>
+
+          <!-- Price Range Filter in Popup -->
+          <div class="dropdown-section">
+            <div class="dropdown-header">
+              <span>Price Range</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="dropdown-content">
+              <div class="price-range-inputs">
+                <div class="price-input-row">
+                  <input type="number" id="popupPriceMin" placeholder="Min" min="0" class="filter-price-num">
+                  <span>to</span>
+                  <input type="number" id="popupPriceMax" placeholder="Max" min="0" class="filter-price-num">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Brand Filter in Popup -->
+          <div class="dropdown-section">
+            <div class="dropdown-header">
+              <span>Brand (Company)</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="dropdown-content checkbox-list scrollable-list" id="popupBrandList">
+              <label class="filter-checkbox"><input type="checkbox" name="popup-brand" value="AMLER"> <span>AMLER</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-brand" value="Sony"> <span>Sony</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-brand" value="ILIFE"> <span>ILIFE</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-brand" value="FITRIC"> <span>FITRIC</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-brand" value="OnePlus"> <span>OnePlus</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-brand" value="JBL"> <span>JBL</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-brand" value="Philips"> <span>Philips</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-brand" value="Mani Electronics"> <span>Mani Electronics</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-brand" value="Cyberpunk"> <span>Cyberpunk</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-brand" value="Anchor"> <span>Anchor</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-brand" value="Boat"> <span>Boat</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-brand" value="Noise"> <span>Noise</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-brand" value="LG"> <span>LG</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-brand" value="Samsung"> <span>Samsung</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-brand" value="Apple"> <span>Apple</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-column">
+          <h4 class="filter-section-title">Features & Rating</h4>
+          
+          <!-- Rating in Popup -->
+          <div class="dropdown-section">
+            <div class="dropdown-header">
+              <span>Customer Rating</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="dropdown-content checkbox-list">
+              <label class="filter-radio"><input type="radio" name="popup-rating" value="all" checked> <span>All Ratings</span></label>
+              <label class="filter-radio"><input type="radio" name="popup-rating" value="4.5"> <span>4.5 ★ & above</span></label>
+              <label class="filter-radio"><input type="radio" name="popup-rating" value="4.0"> <span>4.0 ★ & above</span></label>
+              <label class="filter-radio"><input type="radio" name="popup-rating" value="3.5"> <span>3.5 ★ & above</span></label>
+            </div>
+          </div>
+
+          <!-- Availability & Warranty in Popup -->
+          <div class="dropdown-section">
+            <div class="dropdown-header">
+              <span>Status & Warranty</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="dropdown-content checkbox-list">
+              <label class="filter-checkbox"><input type="checkbox" name="popup-availability" value="in-stock"> <span>In Stock</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-availability" value="out-of-stock"> <span>Out of Stock</span></label>
+              <div class="sidebar-divider" style="margin: 8px 0;"></div>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-warranty" value="1 Year"> <span>1 Year Warranty</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-warranty" value="2 Years"> <span>2 Years Warranty</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-warranty" value="No Warranty"> <span>No Warranty</span></label>
+            </div>
+          </div>
+
+          <!-- Features in Popup -->
+          <div class="dropdown-section">
+            <div class="dropdown-header">
+              <span>Features</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="dropdown-content checkbox-list" id="popupFeaturesList">
+              <label class="filter-checkbox"><input type="checkbox" name="popup-features" value="Deep Bass"> <span>Deep Bass</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-features" value="Fast Charging"> <span>Fast Charging</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-features" value="Flatwire"> <span>Flatwire</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-features" value="Foldable/Collapsible"> <span>Foldable/Collapsible</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-features" value="Noise Cancellation"> <span>Noise Cancellation</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-features" value="Sweat Proof"> <span>Sweat Proof</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-features" value="True Wireless"> <span>True Wireless</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-features" value="Water Resistant"> <span>Water Resistant</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-column">
+          <h4 class="filter-section-title">Discount, Colors & Services</h4>
+          
+          <!-- Discount in Popup -->
+          <div class="dropdown-section">
+            <div class="dropdown-header">
+              <span>Discount</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="dropdown-content checkbox-list">
+              <label class="filter-radio"><input type="radio" name="popup-discount" value="50"> <span>50% or more</span></label>
+              <label class="filter-radio"><input type="radio" name="popup-discount" value="40"> <span>40% or more</span></label>
+              <label class="filter-radio"><input type="radio" name="popup-discount" value="30"> <span>30% or more</span></label>
+              <label class="filter-radio"><input type="radio" name="popup-discount" value="20"> <span>20% or more</span></label>
+              <label class="filter-radio"><input type="radio" name="popup-discount" value="10"> <span>10% or more</span></label>
+              <label class="filter-radio"><input type="radio" name="popup-discount" value="0" checked> <span>No Minimum</span></label>
+            </div>
+          </div>
+
+          <!-- Color Grid in Popup -->
+          <div class="dropdown-section">
+            <div class="dropdown-header">
+              <span>Colors</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="dropdown-content">
+              <div class="color-picker-grid" id="popupColorList">
+                <button class="color-btn" style="background-color: #f5f5dc;" data-color="Beige" title="Beige"></button>
+                <button class="color-btn" style="background-color: #000000; border: 1px solid #555;" data-color="Black" title="Black"></button>
+                <button class="color-btn" style="background-color: #2563eb;" data-color="Blue" title="Blue"></button>
+                <button class="color-btn" style="background-color: #964b00;" data-color="Brown" title="Brown"></button>
+                <button class="color-btn" style="background-color: #ffd700;" data-color="Gold" title="Gold"></button>
+                <button class="color-btn" style="background-color: #10b981;" data-color="Green" title="Green"></button>
+                <button class="color-btn" style="background-color: #6b7280;" data-color="Grey" title="Grey"></button>
+                <button class="color-btn multicolor" data-color="Multicolor" title="Multicolor"></button>
+                <button class="color-btn" style="background-color: #f97316;" data-color="Orange" title="Orange"></button>
+                <button class="color-btn" style="background-color: #ec4899;" data-color="Pink" title="Pink"></button>
+                <button class="color-btn" style="background-color: #a855f7;" data-color="Purple" title="Purple"></button>
+                <button class="color-btn" style="background-color: #ef4444;" data-color="Red" title="Red"></button>
+                <button class="color-btn" style="background-color: #c0c0c0;" data-color="Silver" title="Silver"></button>
+                <button class="color-btn" style="background-color: #ffffff; border: 1px solid #ddd;" data-color="White" title="White"></button>
+                <button class="color-btn" style="background-color: #eab308;" data-color="Yellow" title="Yellow"></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repair & Services in Popup -->
+          <div class="dropdown-section">
+            <div class="dropdown-header">
+              <span>Repair & Service Filters</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="dropdown-content checkbox-list" id="popupRepairServiceList">
+              <label class="filter-checkbox"><input type="checkbox" name="popup-serviceType" value="repair"> <span>Repair</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-serviceType" value="installation"> <span>Installation</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-serviceType" value="maintenance"> <span>Maintenance</span></label>
+              <div class="sidebar-divider" style="margin: 8px 0;"></div>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-deviceCategory" value="fridge"> <span>Fridge</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-deviceCategory" value="cooler"> <span>Cooler</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-deviceCategory" value="tv"> <span>TV</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-deviceCategory" value="watch"> <span>Watch</span></label>
+              <div class="sidebar-divider" style="margin: 8px 0;"></div>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-serviceMode" value="home-visit"> <span>Home Visit</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-serviceMode" value="store-walk-in"> <span>Store Walk-in</span></label>
+              <div class="sidebar-divider" style="margin: 8px 0;"></div>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-repairUrgency" value="normal"> <span>Normal</span></label>
+              <label class="filter-checkbox"><input type="checkbox" name="popup-repairUrgency" value="express"> <span>Express</span></label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="filter-modal-footer">
+        <button class="btn-clear-popup-filters" id="btnClearPopupFilters"><i class="fa-solid fa-filter-circle-xmark"></i> Reset All</button>
+        <button class="btn-apply-popup-filters" id="btnApplyPopupFilters">Apply Filters</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Application Logic JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
