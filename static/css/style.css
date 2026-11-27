@@ -118,6 +118,24 @@ header.scrolled .nav-container {
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo {
+    animation: none;
+  }
 }
 
 .logo:hover .logo-dot {
